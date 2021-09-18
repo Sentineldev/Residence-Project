@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" /static/css/expense-style.css">
+</head>
+<body>
+
+    <nav>
+        <header id='nav_header'>La Bella Italia</header>
+        <a href=" # ">Inicio</a>
+        <a href=" # ">Registrar Pago</a>
+        <a href=" # " id='logout'>Salir</a>
+        <div class="search_bar_box">
+            <div class="search_bar">
+                <input id='search_input' type="text" placeholder="Buscar Apartamento">
+                <button type="submit" id='search_button'></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="expenses">
+        <div class="option_menu">
+            <ul class="menu_box">
+                <li >
+                    <button class="option_btn" id="btn-open-expense-month">Abrir Mes</button>
+                </li>
+                <li >
+                    <button class="option_btn"  id="btn-create-expense-concept">Agregar Concepto</button>
+                </li>
+                <li>
+                    <button class="option_btn" id="btn-register-balance">Registrar Fondo</button>
+                </li>
+                <li >
+                    <button class="option_btn"  id="btn-create-register-monthly-payment">Registrar Cuota</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <p class="current-date">Fecha Actual: {{current_date}}</p>
+            <header class="content-header">
+                <p id='header-date'>Enero - 2021</p>
+                <div class="primary-container">
+                    <select class='select_date' id="year">
+                        <option value="2021">2021</option>
+                    </select>
+                    <select class='select_date' id="month">
+                        {% for month in months %}
+                        <option value="{{month}}"> {{month}} </option>
+                        {% endfor %}
+                    </select>
+                    <div class="btn-box">
+                        <button id="btn-load">Cargar</button>
+                    </div>
+                </div>
+            </header>
+            <div class="links_box">
+                <ul class="link-list">
+                    <li><a id='real-expenses' href="#" class="nav-link">Real</a></li>
+                    <li><a id='estimated-expenses' href="#" class="nav-link">Estimado</a></li>
+                    <li><a id='residence-balance' href="#" class="nav-link">Fondo</a></li>
+                    <li><a id='monthly-payment' href="#" class="nav-link">Cuota</a></li>
+                </ul>
+            </div>
+
+            <div class="information-box">
+            </div>
+
+            <div class="records-container"></div>
+
+    
+            
+
+        </div>
+    </section>
+    
+</body>
+<script type="module" defer  src="{{url_for('static',filename='js/expenses/administrator/expense.mjs')}}"></script>
+</html>

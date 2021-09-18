@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: rgb(29,31,31);
+background: linear-gradient(135deg, rgba(29,31,31,1) 53%, rgba(70,71,73,1) 81%);
+}
+
+.form-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(24, 21, 21);
+    color: white;
+    padding: 2rem;
+    width: 300px;
+    border-radius: 0.4rem;
+    box-shadow: 5px 20px 20px rgb(24, 22, 22);
+}
+#form_img{
+    width: 64px;
+    margin: 6rem auto;
+}
+form h1{
+    font-size: 1.6rem;
+}
+
+
+form button{
+    margin: 3rem 0;
+    padding: 0.7rem 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.8rem;
+
+    background-color: rgb(5, 92, 92);
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 3px teal;
+    color: rgb(196, 196, 196);
+}
+
+form button:hover{
+    background-color: rgb(15, 102, 102);
+}
+form button:active{
+    background-color: rgb(5, 92, 92);
+}
+form p{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    color: #aaa;
+    margin: 2rem;
+}
+.username_box{
+    display: flex;
+    border-bottom: 2px solid #aaa;
+    margin: 1.2rem 0;
+}
+.username_box img{
+    padding: 0.5rem 0;
+}
+.username_box input{
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+}
+.password_box{
+    display: flex;
+    border-bottom: 2px solid #aaa;
+    margin: 1.2rem 0;
+}
+
+.password_box img{
+    padding: 0.5rem 0;
+}
+
+.password_box input{
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+}
+.message_box{
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0.685);
+    padding: 1.5rem 3rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+.message_box p{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: white;
+    
+}
+
+
+
+@keyframes slidein {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

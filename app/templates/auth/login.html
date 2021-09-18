@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages%}
+    {% for message in messages %}
+    <div class="message_box">
+        <p> {{message}} </p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="form-container">
+        <form method="POST">
+            <h1>La Bella Italia</h1>
+            <img src="/static/images/login/house.png" id='form_img'>
+            <div class="username_box">
+                <img src="/static/images/login/user_white.png">
+                <input type="text" name='username' id='username' placeholder="Usuario">
+            </div>
+            <div class="password_box">
+                <img src="/static/images/login/padlock_white.png">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <button>Conectarse</button>
+        </form>
+    </div>
+</body>
+</html>
